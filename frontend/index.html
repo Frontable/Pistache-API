@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pistache Users</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>User Management</h1>
+
+        <section id="authSection">
+
+            <div class="tabs">
+                <button type="button" id="loginTab" class="tab active">Log in</button>
+                <button type="button" id="registerTab" class="tab">Register</button>
+            </div>
+
+            <form id="loginForm">
+                <input id="loginEmail" type="email" placeholder="Email" required>
+                <input id="loginPassword" type="password" placeholder="Password" required>
+                <button type="submit">Log in</button>
+            </form>
+
+            <form id="registerForm" hidden>
+                <input id="registerName" type="text" placeholder="Name" required>
+                <input id="registerEmail" type="email" placeholder="Email" required>
+                <input id="registerPassword" type="password" placeholder="Password (min 8 characters)" required minlength="8">
+                <button type="submit">Register</button>
+            </form>
+
+            <p id="authError" class="error" hidden></p>
+
+        </section>
+
+        <section id="appSection" hidden>
+
+            <div class="session-bar">
+                <span id="sessionInfo"></span>
+                <button type="button" id="logoutButton" class="secondary">Log out</button>
+            </div>
+
+            <h2>Users</h2>
+
+            <div id="users">
+                Loading...
+            </div>
+
+            <div class="pagination">
+                <button type="button" id="prevPage" class="secondary">&larr; Prev</button>
+                <span id="pageInfo"></span>
+                <button type="button" id="nextPage" class="secondary">Next &rarr;</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
